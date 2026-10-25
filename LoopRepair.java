@@ -7,7 +7,7 @@ public class LoopRepair {
     public int countVowels(String text) {
         int count = 0;
         for (int i = 0; i < text.length(); i++) {
-            char current = text.charAt(i);
+            char current = Character.toLowerCase(text.charAt(i));
             if (current == 'a' || current == 'e' || current == 'i'
                     || current == 'o' || current == 'u') {
                 count++;
@@ -51,7 +51,7 @@ public class LoopRepair {
     // Method Call That Caught It:
     public int countCapitals(String text) {
         int capitals = 0;
-        for (int index = 1; index < text.length(); index++) {
+        for (int index = 0; index < text.length(); index++) {
             char letter = text.charAt(index);
             if (letter >= 'A' && letter <= 'Z') {
                 capitals++;
